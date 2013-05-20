@@ -1,6 +1,8 @@
-![emi](https://raw.github.com/antivapor/ucf-senior-design/master/images/all_together.png)
+![emi](https://raw.github.com/antivapor/UCF-Senior-Design/master/images/all_together.png)
 #Senior Design 
-Website for three devices made for EECS Senior Design at UCF, Fall 2012. See http://www.eecs.ucf.edu/seniordesign/su2012fa2012/g01.
+Website for three devices made for EECS Senior Design at UCF, Fall 2012. 
+
+See http://www.eecs.ucf.edu/seniordesign/su2012fa2012/g01.
 
 ##Related 
 
