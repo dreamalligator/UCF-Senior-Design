@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Electronic Musical Interactions</title>
+<meta name="keywords" content="uwave, theremin, pitch-to-midi, sensebox, expandome, arduinome, monome, emi, emi labs, electronic musical interaction, interface, synthesizer, computer music, electrical engineering, ucf, antivapor, thomas spalding, anthony adu, kenzo mendoza, florie trinh, central florida, sequencer, diy, music, audio, circuit, grid, controller, midi, pitch, florida, musical, mayhem, ephemeral, ether, chronome, pcb, custom, hand capacitance, learning, feedback, virtuosic, experience">
+<meta name="description" content="A theremin, pitch-to-MIDI converter, and an expandable OSC grid controller were designed as a study on the themes of iterative design, learning through direct feedback, and creating a virtuosic experience with ease.">
+<meta name="author" content="Antivapor">
+<link href="stylesheet.css" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/gif" href="animated_favicon.gif">
+</head>
+<body>
+<div id="banner">
+<img src="images/coils.png" class="banner_left"><h1 class="banner">EMI LABS</h1><h2 class="banner">Electronic Musical Interaction</h2><h2 class="menu"><a href="index.html">home</a> | <a href="docs.html">documents</a> | <a href="media.html">media</a> | <a href="contact.html">bios & contact</a> | <a href="tools.html">tools</a></h2><img src="images/over.png" class="banner_right">
+</div>
+<!----CONTENT----->
+<h1 class="blue">Introduction</h1>
+<img src="images/all_together.png" class="header_img">
+<p>Examining the use of ephemeral interaction with technology, our senior design group decided to tie together the theremin, a musical instrument that can be played without touch, to create a technological interaction that took physical bodies as input via the ephemeral, and provide a highly customizable interaction environment. To tie together this highly adaptable environment we lit upon Hochenbaum's case study on the Chronome  that notes to provide a virtuosic experience without the years of mastery, one must find a balance between the complexity of an instrument and ease of use. Having found this highly pertinent to our endeavor we decided to use this as the hub of interaction between the MIDI-capable theremin and any other MIDI-capable performance instrument. We set to make each device modular, to expand upon this customizability, in that they can be placed together in many number of combinations to reflect one's personal mental organization. By creating the Expandome we wanted to even further push the easy-grid instrument to the next level. The theremin, as an infinitely variable instrument, that requires years of practice as well as a near perfect pitch ear to master, is an ideal candidate for our intermediary device, a pitch-to-MIDI converter. This device can take any analog instrument and allow pitch-mapping, and arpeggiated control, as well as direct feedback for practice. This complements our theme of ease-in-interaction in proficient playing, as well as gives any analog instrument social and adaptable input to our performance device hub.</P>
+
+<p>Our final goal is to create a virtuosic experience through high customizability, modularity, and simplicity. We shall accomplish this by understanding and developing the following devices: a theremin, a pitch-to-MIDI converter, and at least three Expandome.</p>
+
+<p>Another set of goals revolves around a theme of learning through direct feedback. A virtual instrument interface will be created that provides the user with all the tools to directly control the devices, as well as provide real-time data on the operation of the units. For example, the theremin will be supplemented with a pitch training subprogram. It will provide a novice thereminist immediate pitch and note display on a concert pitch scale.</p>
+<h1 class="green">uWave Theremin</h1>
+<img src="images/uwave.png" class="header_img">
+<p>Patented in 1928, the theremin was the first electronic musical instrument. Although now a classic example, it has always been the most drastic break from any traditional instrument before or since. The theremin is played by moving both hands in the air in the vicinity of two antennas. The player’s hands creates a ‘hand capacitance’ between the antenna and true ground through one’s hand, acting as a plate, and the antenna as the other plate. Typically, the left hand controls the volume, and the right hand the pitch. For the purpose of this project we will call our implementation of this device the uWave Theremin. The theremin requires an exquisite ear and complete control of one’s motion; this brings us to our second device, a pitch-to-MIDI converter.</p>
+<h1 class="yellow">SenseBox Pitch-to-MIDI Converter</h1>
+<img src="images/sensebox.png" class="header_img_sm">
+<p>This device takes an incoming audio signal and converts it to MIDI data messages. The audio signal is analyzed by comparing its frequency to a lookup table of musical scale note pitches. The incoming audio signal can be directly pitch-matched in the outgoing MIDI data or used as a controller via data messages. By allowing the infinitely fluid theremin to be mapped to data messages, we will be able to directly see how in-tune the player is. This is useful as direct training feedback. It also allows the theremin to not only be an instrument but dually gives it the capability of a MIDI controller. In the latter faculty, it will be able to control any virtual instruments. In both capacities it will be able to be either an input source, or supplemental controller with our next device, the Expandome.</p>
+<h1 class="orange">Expandome OSC Controller</h1>
+<img src="images/expandome.png" class="header_img_sm">
+<p>Hochenbaum et al. ported the Monome  to the Arduino platform with the Arduinome . They additionally expanded upon this ideally simplistic, yet complex musical tool with the aim at creating an instrument that could elicit a virtuosic experience with ease. The Monome and its ported version are both very minimalist grid devices that are not actually instruments, but controllers. Upon pushing a button, the information is sent via shift registers to the computer, which being controlled by one of the various programs (described below), then tells it what to do. These MIDI-capable programs can begin tracks, set beat-counts, produce direct noise, and be used as anything really imaginable as an input including an alternative game controller pad, keyboard or spectrum visualizer.</p>
+
+<p>The Expandome is an iterative development  on the Arduinome, as was the Chronome on the Arduinome to further this easy-grid concept. It is an effort to add to this highly customizable environment by allowing multiple users to interact together and provide a fluid setup that reflects the user’s personal performance organization style. It is a highly adaptable MIDI controller implementing a backlit push-button grid. This will be accomplished by allowing each device to work standalone, or pushed together with another device. The devices will be in three grid forms, an 8x8, 4x8, and 4x4 and each device will have internal storage to save setups and beats, so as not to always rely on computers, and dually be able to aid in spontaneous interaction with other performers.</p>
+<h1 class="red">EMI Browser</h1>
+<img src="images/browser.png" class="header_img">
+<p>A browser was developed in Love Lua, Processing, and Pure Data to add additional functionality to the devices. In its most minimal form, it can simply route the OSC and MIDI messages from the devices. It provides emulation functionality, can translate and route OSC, UDP, and MIDI, has a theremin trainer, debug modes for the devices, works in concert with any standard DAW, and can easily integrate additional sub-programs and patches written by a user.</p>
+<!----END CONTENT----->
+<hr>
+<h3 class="footer">Continued and future work can be found at <a href="http://emilabs.net">http://emilabs.net</a>.<br><br>
+This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. See the <a href="https://github.com/antivapor">source on GitHub</a>.</h3>
+</body>
+</html>

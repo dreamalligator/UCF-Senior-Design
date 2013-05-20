@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Electronic Musical Interactions</title>
+<meta name="keywords" content="uwave, theremin, pitch-to-midi, sensebox, expandome, arduinome, monome, emi, emi labs, electronic musical interaction, interface, synthesizer, computer music, electrical engineering, ucf, antivapor, thomas spalding, anthony adu, kenzo mendoza, florie trinh, central florida, sequencer, diy, music, audio, circuit, grid, controller, midi, pitch, florida, musical, mayhem, ephemeral, ether, chronome, pcb, custom, hand capacitance, learning, feedback, virtuosic, experience">
+<meta name="description" content="A theremin, pitch-to-MIDI converter, and an expandable OSC grid controller were designed as a study on the themes of iterative design, learning through direct feedback, and creating a virtuosic experience with ease.">
+<meta name="author" content="Antivapor">
+<link href="stylesheet.css" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/gif" href="animated_favicon.gif">
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+	src="mathjax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<div id="banner">
+<img src="images/coils.png" class="banner_left"><h1 class="banner">EMI LABS</h1><h2 class="banner">Electronic Musical Interaction</h2><h2 class="menu"><a href="index.html">home</a> | <a href="docs.html">documents</a> | <a href="media.html">media</a> | <a href="contact.html">bios & contact</a> | <a href="tools.html">tools</a></h2><img src="images/over.png" class="banner_right">
+</div>
+<!----CONTENT----->
+<h1 class="blue">Antenna Capacitance and Calculators</h1>
+<p><img src="images/antenna_equivalent.png" width="700"><br><br>
+
+... the pitch antenna is responsible for varying the pitch or frequency of the sound produced by the device. It is operated by placing the hand near the antenna thus changing the total capacitance seen by the pitch antenna circuit. The antenna capacitance equation<sup>1</sup> is used to illustrate this:</p>
+
+<p class="center">Equation 1: $C_A(\infty )=\frac{2\pi\epsilon_0h}{log(\frac{2h}{d})-k}$</p>
+ 
+<p>where $C_A$ is the antenna's capacitance, $h$ and $d$ are height and diameter of the antenna respectively, $\epsilon_0$ is the permittivity of free space (8.85 x 10<sup>-12</sup> Fm<sup>-1</sup>), and $k$ is a constant depending on how far above the ground the antenna is mounted, which is about 0.4 for an antenna mounted almost at ground level<sup>1</sup>.  The permittivity of free space, $\epsilon_0$, gives a hint that the capacitance of the antennas will be affected by characteristics like humidity.</p>
+
+<p>Equation 1 is the antenna's capacitance seen when the players hand is far away from the antenna; this equation also applies for the volume antenna.  Using Equation 1 and an antenna with $h$ = 0.45m (18 in) and $d$ = 0.0095 m (3/8 in) and $k$ being 0.4 we get $C_A$ to be approximately 15.87 pF.  The change in antenna capacitance when the players hand is in proximity is given by the following equation:</p>
+
+<p class="center">Equation 2: $\Delta C_A\approx\frac{\pi\epsilon_0h}{10log(\frac{4x}{d})}$</p>
+
+<p>Where $x$ is the players hand distance from the antenna (it is assumed that this distance is greater than $d$)<sup>1</sup>.  So, according to Equation 2, if a players hand is 4 m away from the antenna, a change in capacitance of only 0.43 pF is introduced to the antenna circuitry.  
+As the player puts his hands close to the pitch antenna, the pitch frequency increases and as the player puts his hand away from the antenna, the pitch frequency decreases.  The pitch antenna will be vertically placed on the right hand side of the uWave Theremin as this configuration is more sensitive to the players hand far away from it, and less sensitive when the players hand is close by<sup>2</sup>.</p>
+
+<p class="foot"><a href="http://ajp.aapt.org/resource/1/ajpias/v66/i11/p945_s1">[1]: Physics of the Theremin Skeldon, K., Reid, L., McInally, V., Dougan, B., Fulton, C., Am. J. Phys. Vol. 66, No. 11, November 1998.</a><br>
+<note><a href="http://www.cs.nmsu.edu/~rth/EMTheremin.pdf">[2]: Build the EM Theremin Moog, R., Electronic Musician, pg. 86-100, Feb., 1996</a></p>
+
+<p class="right">...excerpt from final paper, see <a href="/docs.html">documents</a>.</p>
+<br>
+<p>
+<script type="text/javascript" id="WolframAlphaScript172d910bd9c5614bdbdcfd6b72d86982" src="http://www.wolframalpha.com/widget/widget.jsp?id=172d910bd9c5614bdbdcfd6b72d86982"></script>
+
+<script type="text/javascript" id="WolframAlphaScripte4c7f6eeec73e6d2404cc030a150470c" src="http://www.wolframalpha.com/widget/widget.jsp?id=e4c7f6eeec73e6d2404cc030a150470c"></script></p>
+<!----END CONTENT----->
+<hr>
+<h3 class="footer">Continued and future work can be found at <a href="http://emilabs.net">http://emilabs.net</a>.<br><br>
+This work is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>. See the <a href="https://github.com/antivapor">source on GitHub</a>.</h3>
+</body>
+</html>

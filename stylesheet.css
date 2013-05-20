@@ -1,0 +1,149 @@
+@font-face {
+	font-family:Cutive;
+	src:url('/fonts/CutiveMono-Regular.ttf');}
+html,body {
+	background:#EEE;
+	font-family:Arial;
+	font-size:13px;
+	margin:0;
+	padding:0;
+	text-align:justify;
+	text-justify:inter-word;}
+h1{
+	color:#FFF;
+	padding:10px;
+	margin-top:0px;}
+h1 a {color:#FFF;}
+h1,h2,h3,h4,h5 {padding-left:20px;}
+h2{color:#197575;}
+h3{color:#434343;}
+p {
+	padding-left:20px;
+	line-height:1.3em;
+	width:700px;}
+p a {color:#385C85;}
+p.center{text-align:center}
+p.foot{font-size:10px;}
+p.right{text-align:right;}
+.red{background:#FF001E;}
+.bluer{background:#1975D1;}
+.blue{background:#006666;}
+.green{background:#00FF7B;}
+.orange{background:#FFB300;}
+.yellow{background:#FFEA00;}
+a{
+	text-decoration:none;
+	color:#000;}
+a:hover{color:#006666;}
+td{
+	text-align:justify;
+	text-justify:inter-word;
+	padding:20;}
+table{margin:20;}
+td{vertical-align:top;}
+img.header_img{
+	position:absolute;
+	height:120px;
+	left:800px;
+	margin-top:-100px;}
+img.header_img_sm{
+	position:absolute;
+	height:100px;
+	left:830px;
+	margin-top:-100px;}
+h1.banner{
+	font-family:Cutive,Arial;
+	color:#000;
+	position:absolute;
+	left:350px;
+	top:80px;}
+h2.banner{
+	font-family:Cutive,Arial;
+	position:absolute;
+	left:350px;
+	top:100px;}
+h2.menu{
+	font-family:Cutive,Arial;
+	position:absolute;
+	left:25px;
+	top:195px;
+	z-index:10;}
+img.banner_left{
+	height:150px;
+	top:0px;
+	margin-left:20px;
+	margin-top:20px;
+	margin-bottom:30px;
+	padding:20px;}
+img.banner_right{
+	position:absolute;
+	height:150px;
+	left:650px;
+	top:0px;
+	margin-right:20px;
+	margin-top:20px;
+	margin-bottom:30px;
+	padding:20px;}
+div #banner{height:180px;}
+h3.footer{
+	font-family:Cutive,Arial;
+	padding:20px;
+	line-height:80%;
+	margin:0;}
+h3.footer a{color:#434343}
+h3.footer a:hover{color:#006666;}
+
+iframe{margin:20px;}
+canvas {margin:0px 0px 0px 20px;}
+div.ref-col {
+	float:left;
+	width:32%;}
+	
+body {counter-reset: section;}
+#paper h1,#paper h1 a,#paper h1 a:hover{
+	color:#197575;
+	counter-reset:section1;
+	content: " (" attr(href) ")";}
+#paper h2{counter-reset:section2;}
+#paper h3{counter-reset:section3;}
+#paper h4{counter-reset:section4;}
+#paper h5{counter-reset:section5;}
+#paper h6{counter-reset:section6;}
+#paper h7{counter-reset:section7;}
+#paper h8{counter-reset:section8;}
+#paper h9{counter-reset:section9;}
+#paper h10{counter-reset:section10;}
+#paper h1:before {
+	counter-increment: section;     
+	content: "SECTION " counter(section) " ";}
+#paper h2:before {
+	counter-increment: section1;     
+	content: counter(section) "." counter(section1) " ";}
+#paper h3:before {
+	counter-increment: section3;     
+	content: counter(section) "." counter(section1) "." counter(section2) " ";}
+#paper h4:before {
+	counter-increment: section4;     
+	content: counter(section) "." counter(section1) "." counter(section2) "." counter(section3) " ";}
+#paper h5:before {
+	counter-increment: section5;     
+	content: counter(section) "." counter(section1) "." counter(section2) "." counter(section3) "." counter(section4) " ";}
+#paper h6:before {
+	counter-increment: section6;     
+	content: counter(section) "." counter(section1) "." counter(section2) "." counter(section3) "." counter(section4) "." counter(section5) " ";}
+#paper h7:before {
+	counter-increment: section7;     
+	content: counter(section) "." counter(section1) "." counter(section2) "." counter(section3) "." counter(section4) "." counter(section5) "." counter(section6) " ";}
+#paper h8:before {
+	counter-increment: section8;     
+	content: counter(section) "." counter(section1) "." counter(section2) "." counter(section3) "." counter(section4) "." counter(section5) "." counter(section6) "." counter(section7) " ";}
+#paper h9:before {
+	counter-increment: section9;     
+	content: counter(section) "." counter(section1) "." counter(section2) "." counter(section3) "." counter(section4) "." counter(section5) "." counter(section6) "." counter(section7) "." counter(section8) " ";}
+#paper h10:before {
+	counter-increment: section10;     
+	content: counter(section) "." counter(section1) "." counter(section2) "." counter(section3) "." counter(section4) "." counter(section5) "." counter(section6) "." counter(section7) "." counter(section8) "." counter(section9) " ";}
+	
+#paper p a {font-size:xx-small;vertical-align:top;}
+#paper img{max-width:700px;}
+#paper ul{max-width:680px;}
