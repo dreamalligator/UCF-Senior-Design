@@ -262,5 +262,22 @@ Furthermore, operating in low-power voltage (5V) and with a clock speed of 16MHz
 
 [13]: http://arduino.cc "See http://arduino.cc"
 
+*	8 bit microcontroller
+*	6 PWM channels
+*	6 analog inputs (10-bit Analog Digital Conversion)
+*	14 digital input/output pins
+*	32 KB Flash
+*	2 KB SRAM
 
+Furthermore, programming the ATmega328p is natural to comprehend: the microprocessor is programmed in the Arduino environment language, which is based on the Wiring programming language. Similar to programming through assembly language and C-like language, the Arduino programming language has built in functions, variables, and mathematical operations for the programmer to control. As a result, the programmer can navigate and interface with various peripherals through the analog and digital to communicate with the microprocessor[13][13].
+
+### Audio Interface
+One of the versatile things about having MIDI instruments and controllers is that it allows the user to record MIDI data through a DAW (Digital Audio Workstation). For recording musicians, this helped them to capture and enhance their creative art-work by manipulating sounds through the digital world. Thus, in actuality, when the theremin is connected to the SenseBox, the theremin acts as an MIDI controller.
+
+However, we felt that in honor of Léon Theremin, the inventor of the theremin, we would not want to disregard the actual analog output of the theremin itself. Otherwise, it will lose a great deal of expression of playing an actual theremin.
+
+#### Bit Depth & Sampling Rate
+Ideally, we have to choose an audio interface that has a sampling rate of at least 16 bit depth - the higher bit depth, the better overall sound quality will produce. It is essential, however, to have a sampling rate at least 40 kHz because in order to sample a good quality audio, it must fulfill the Nyquist criterion (in terms of human physiology, the human ear can perceive frequencies from 20 to 20 kHz. Hence by Nyquist criterion, it must sample 2 times of 20 kHz to assure us that the original signal can be constructed without any loss. Otherwise, the conversion of the audio will face aliasing[14][14] ).
+
+Fortunately, today’s market on audio interface meets our criterion. The following sections will discuss other considerations when choosing the right audio interface.
 
