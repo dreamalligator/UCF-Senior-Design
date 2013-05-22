@@ -92,7 +92,7 @@ Our search for a uWave Theremin design that would serve as a good reference brou
 
 As research on all the different variations of the theremin continued it was noticed that they all had something in common with each other.  They were all composed of three main blocks - each capable of producing an output and taking in inputs.  These blocks include the antenna circuitry, the beat oscillator, and the volume controllers, which can be seen in more detail in our block diagram below.  For our research we focused on these three parts individually to understand how the theremin works. In essence, it gave us an idea of what to expect during design and testing, which will be discussed later.
 
-![Figure 1](/images/block_emtheremin.jpg "Block diagram of EM Theremin")
+![Figure 1](../images/block_emtheremin.jpg "Block diagram of EM Theremin")
 
 ###Antennas 
 The uWave Theremin utilizes two antennas.  Though the term "antenna" will be used, it should be noted that these aren't regular antennas but they are only one plate of a capacitor connected to a circuitry to create a capacitance sensor[6][6]. As mentioned in the project definition, one antenna will be used for controlling pitch and the other will be used to control volume, or the amplitude of the pitch frequency.  In this section we will look at a few antennas made of different materials and see their effects.  We will also investigate the pitch and volume antennas and see how their capacitance affects their respective circuits and the uWave Theremin as a whole.
@@ -123,7 +123,7 @@ Where $x$ is the players hand distance from the antenna (it is assumed that this
 
 [8]: www.cs.nmsu.edu/~rth/EMTheremin.pdf "Build the EM Theremin Moog, R., Electronic Musician, pg. 86-100, Feb., 1996"
 
-![Figure 2](/images/antenna_equivalent.png "Equivalent representation of hand and antenna capacitance")
+![Figure 2](../images/antenna_equivalent.png "Equivalent representation of hand and antenna capacitance")
 
 Since the antenna is to be straight, a sufficient method for straightening it without leaving any kinks has to be considered.  If the antenna isn't purchased straight, then the antenna can be easily straightened by hand or by using a tube bender on it slowly and gently.  The pitch antenna of choice will be eighteen inches long and 3/8 in diameter.  This dimension is chosen because it gives the uWave Theremin a compact look to it.  Although the length was chosen for aesthetic reasons, the length of the antenna will have an indirect effect on the hand-to-antenna capacitance by not only affecting the antennas capacitance, but also the hand-to-antenna range as demonstrated in equation 2[9][9].  This will be important as it has an effect on the pitch antenna's reactance and the total impedance of the pitch circuit.  Because of its relatively short length, it was cascaded with multiple inductors to form a resonant frequency of 260 kHz[8][8].  This frequency was chosen in order to reduce interference from other devices in the vicinity of the uWave Theremin.  Since hand to antenna capacitance can vary on the order of 1pF to 15pF, the impedance of the pitch antenna circuit is drastically altered when the user brings his/her hand in proximity of the pitch antenna.  The equivalent circuit of the antennas can be seen in Figure 2.
 
@@ -151,11 +151,11 @@ The VPO is very much similar to the FPO.  In fact, their circuit design is almos
 #####Beat Detector
 As stated in the previous two sections, the uWave Theremin will use two oscillators to create the audio signal - one being a reference oscillator and the other a variable oscillator.  The VPO serves to create the variation in frequencies ranging from 0 to 3 kHz (about 3$\frac{1}{2}$ octaves above middle c)[8][8]. This is more than enough range of sound for the player to experiment with as seen from the keyboard in [Figure 3]. The figure shows the range of sounds or notes that can be produced from the uWave Theremin demonstrated using a keyboard.
 
-![Figure 3](/images/keyboard_range.png "Range of sounds produced by uWave demonstrated using a keyboard")
+![Figure 3](../images/keyboard_range.png "Range of sounds produced by uWave demonstrated using a keyboard")
 
 In order to retrieve the beat frequency, a detector or demodulator is used.  The detector is mainly composed of mixer, which can be in the form of a single diode, and a low-pass filter as seen in the block diagram below. This block diagram shows what the detector is consisted of and how it interacts with the VPO and FPO.
 
-![Figure 4](/images/block_detector.png "Block diagram showing the function of the detector")
+![Figure 4](../images/block_detector.png "Block diagram showing the function of the detector")
 
 As seen in the figure [above], the signals from both the VPO and the FPO are sent to the mixer, which will be used to create two distinct frequencies through the process known as heterodyning.  The result of the mixed signals is amplitude modulated (AM) signal illustrated using the equation below. 
 
@@ -202,7 +202,7 @@ In different theremin implementations, the VCA primarily performs the same funct
 <tr><td>Cost</td><td>$0.54</td><td>$0.84</td></tr>
 <tr><td>CMRR</td><td>110 dB</td><td>97 dB</td></tr>
 </table>
-Table 1: Comparison of two amplifiers suitable for use as a volume controlled amplifier
+**Table 1:** Comparison of two amplifiers suitable for use as a volume controlled amplifier
 
 From the table above, it is noted that both the LM13700 and the MC34074AP are very similar in characteristics that fit the project need with the exception that the LM3700 is cheaper and has a smaller gain bandwidth.  The LM13700 used in Robert Moog's design would serve as a better choice for use as a VCA though it lacks in gain bandwidth when compared to the MC34074AP used in the Open Theremin design.  This can be over-looked because a VCA with a gain bandwidth of 2 MHz is more than enough for our application where the maximum signal through the VCA will be less than 1 MHz.
 
@@ -224,7 +224,7 @@ choosing a wall adapter power source, we must ensure that it is a three prong po
 to provide proper grounding to the circuit and avoid unwanted humming or noise. The
 capacitors in the power supply circuit provide filtering.
 
-![Figure 5](/images/uwave_power_option_1.png "uWave Power Option 1")
+![Figure 5](../images/uwave_power_option_1.png "uWave Power Option 1")
 
 **uWave Theremin Power Option 2 “Transformer”:**
 
@@ -233,13 +233,13 @@ the voltage, the voltage in must be a minimum of 3 volts greater than the desire
 
 The PCB mountable transformer is typically big and bulky in comparison with the electronic components and board. The design should minimize the size of the components so that ultimately the size of the printed circuit board and the size of the enclosure are as small as possible. By making the device small, it will be more portable and also affordable for this project.
 
-![Figure 6](/images/uwave_power_option_2.png "uWave Power Option 2")
+![Figure 6](../images/uwave_power_option_2.png "uWave Power Option 2")
 
 **uWave Theremin Power Option 3 “Battery”:**
 
 Connect two 9V batteries in series to obtain 18V DC. Connect the 18V DC power supply to a DC to DC converter circuit which will step down the DC voltage to ±12V DC. The uWave Theremin must be connected to ground. If batteries are used as the primary power source, proper grounding is required.
 
-![Figure 7](/images/uwave_power_option_3.png "uWave Power Option 3")
+![Figure 7](../images/uwave_power_option_3.png "uWave Power Option 3")
 
 **uWave Theremin Power Option 4:**
 The uWave may be designed with a dual power source option which uses a DC battery power source or an AC wall adaptor power source, as described in uWave Theremin Power Option 1 and uWave Theremin Power Option 3. This would require in introduction of a relay or a switch which would allow us to either automatically choose the power source or manually choose the power source.
@@ -279,5 +279,32 @@ However, we felt that in honor of Léon Theremin, the inventor of the theremin, 
 #### Bit Depth & Sampling Rate
 Ideally, we have to choose an audio interface that has a sampling rate of at least 16 bit depth - the higher bit depth, the better overall sound quality will produce. It is essential, however, to have a sampling rate at least 40 kHz because in order to sample a good quality audio, it must fulfill the Nyquist criterion (in terms of human physiology, the human ear can perceive frequencies from 20 to 20 kHz. Hence by Nyquist criterion, it must sample 2 times of 20 kHz to assure us that the original signal can be constructed without any loss. Otherwise, the conversion of the audio will face aliasing[14][14] ).
 
+[14]: http://books.google.com/books/about/Practical_Electronics_for_Inventors_2_E.html?id=NmD0SD1-1YwC "Practical Electronics for Inventors. Scherz Paul, McGraw-Hill, November 14, 2006"
+
 Fortunately, today’s market on audio interface meets our criterion. The following sections will discuss other considerations when choosing the right audio interface.
+
+#### USB vs. Firewire
+Today, there are wide ranges of audio interface available. In fact, many USB interfaces have almost identical specifications. If the user wishes to have a higher resolution than our criterion, the user may consider investing in a Firewire audio interface. Firewire can handle 24 bit depth/ 96 kHz sampling rate and can record multiple tracks at the same time (whereas USB can handle one or two tracks). Firewire devices also operate higher speeds than USB; Firewire is almost 70% percent faster than USB when it comes to writing
+data[15][15].
+
+[15]: "Firewire Vs. USB Audio Interface. Josefsson Jesse, eHow. Demand Media Inc, 2012."
+
+Yet, we have chosen to connect with USB for multiple reasons: for the purpose of this project, it will record one input at a time (from the theremin’s monophonic output), and since most computers are equipped with USB ports rather than Firewire, our group felt this was the obvious choice. Furthermore, USB audio interfaces are considered cheaper and have wider range to choose from.
+
+#### Latency
+When it comes to home recording, one of the biggest issue that a novice will face is latency. In digital studio setup, latency is the amount the time it takes an incoming sound signal traveling in the audio interface, where it is converted from analog to digital, placed on an output bus, converted back to analog, amplified and then transmitted to speakers or headphones for you to hear[16][16].
+
+As you can see, if latency is too high, this may cause frustrations when recording with a musician — the musician’s groove should be synced with the other tracks in DAW at all time. Gratefully, Steinberg created a simple solution: ASIO driver. ASIO, or Audio Stream Input/Output, is a computer sound card driver protocol for digital audio. Distributed by Steinberg, this protocol provides a low-latency and high reliability interaction between a software application and a computer’s sound card. In essence, this allows the user to hear what the input will sound like (with or without VST plugins) before it is recorded in the track.
+
+<table>
+<th><td>Audio Interfaces</td><td>Bit Depth</td><td>Sample Rate</td><td>ASIO Driver</td><td>Price Range</td></th>
+<tr><td>Alesis Guitarlink</td><td>16</td><td></td><td></td><td></td></tr>
+<tr><td>Rocksmith Real Tone Cable</td><td>16</td><td></td><td></td><td></td></tr>
+<tr><td>Behringer UCG 102 Guitar to USB Interface</td><td>16</td><td></td><td></td><td></td></tr>
+<tr><td>Hosa $\frac{1}{4}$ in. USB Guitar Cable</td><td>16</td><td></td><td></td><td></td></tr>
+<tr><td>Peavey Xport</td><td>16</td><td></td><td></td><td></td></tr>
+<tr><td>M-audio Fast Track USB</td><td>16</td><td></td><td></td><td></td></tr>
+</table>
+
+**Table 2:** Different models of audio interfaces
 
