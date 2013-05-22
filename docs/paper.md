@@ -196,11 +196,11 @@ As the name implies, a voltage controlled amplifier is a type of amplifier that 
 In different theremin implementations, the VCA primarily performs the same function, but have different topologies and components used.  Some theremin implementation the group researched can be found at thereminworld.com.  The theremin implementations of interest include the Open Theremin and Robert Moog's Etherwave.  The Open Theremin uses the MC34074AP operational amplifier while Robert Moog uses the LM13700 dual operational transconductance amplifier.  Before we begin, it should be noted that the Open Theremin is mostly a digital theremin option while Robert Moog's implementation more closely resembles the original theremin without the use of tubes. 
 
 <table>
-<th>Factors</th><th>LM13700</th><th>MC34074AP</th>
-<tr><td>Slew Rate</td><td>50 V/us</td><td>10 V/us</td></tr>
+<thead><tr><th>Factors</th><th>LM13700</th><th>MC34074AP</th></tr></thead>
+<tbody><tr><td>Slew Rate</td><td>50 V/us</td><td>10 V/us</td></tr>
 <tr><td>Gain Bandwidth</td><td>2 MHz</td><td>4.5 MHz</td></tr>
 <tr><td>Cost</td><td>$0.54</td><td>$0.84</td></tr>
-<tr><td>CMRR</td><td>110 dB</td><td>97 dB</td></tr>
+<tr><td>CMRR</td><td>110 dB</td><td>97 dB</td></tr></tbody>
 </table>
 **Table 1:** Comparison of two amplifiers suitable for use as a volume controlled amplifier
 
@@ -294,18 +294,19 @@ Yet, we have chosen to connect with USB for multiple reasons: for the purpose of
 #### Latency
 When it comes to home recording, one of the biggest issue that a novice will face is latency. In digital studio setup, latency is the amount the time it takes an incoming sound signal traveling in the audio interface, where it is converted from analog to digital, placed on an output bus, converted back to analog, amplified and then transmitted to speakers or headphones for you to hear[16][16].
 
+[16]: http://avp.stackexchange.com/questions/25/what-is-latency-in-a-digital-recording-studio "Stack Exchange. July 5, 2012. Stack Exchange Inc, 2012."
+
 As you can see, if latency is too high, this may cause frustrations when recording with a musician — the musician’s groove should be synced with the other tracks in DAW at all time. Gratefully, Steinberg created a simple solution: ASIO driver. ASIO, or Audio Stream Input/Output, is a computer sound card driver protocol for digital audio. Distributed by Steinberg, this protocol provides a low-latency and high reliability interaction between a software application and a computer’s sound card. In essence, this allows the user to hear what the input will sound like (with or without VST plugins) before it is recorded in the track.
 
 <table>
-<th><td>Audio Interfaces</td><td>Bit Depth</td><td>Sample Rate</td><td>ASIO Driver</td><td>Price Range</td></th>
-<tr><td>Alesis Guitarlink</td><td>16</td><td>44.1kHz</td><td>No</td><td>$35.00</td></tr>
+<thead><tr><th>Audio Interfaces</th><th>Bit Depth</th><th>Sample Rate</th><th>ASIO Driver</th><th>Price Range</th></tr></thead>
+<tbody><tr><td>Alesis Guitarlink</td><td>16</td><td>44.1kHz</td><td>No</td><td>$35.00</td></tr>
 <tr><td>Rocksmith Real Tone Cable</td><td>16</td><td>48.0kHz</td><td>Yes</td><td>$30.00</td></tr>
 <tr><td>Behringer UCG 102 Guitar to USB Interface</td><td>16</td><td>44.1kHz or 48.0kHz</td><td>Yes</td><td>$35.00</td></tr>
 <tr><td>Hosa $\frac{1}{4}$ in. USB Guitar Cable</td><td>16</td><td>48kHz</td><td>No</td><td>$25.00</td></tr>
 <tr><td>Peavey Xport</td><td>16</td><td>48kHz</td><td>Yes</td><td>$60.00</td></tr>
-<tr><td>M-audio Fast Track USB</td><td>16</td><td>48kHz</td><td>Yes</td><td>$199.00</td></tr>
+<tr><td>M-audio Fast Track USB</td><td>16</td><td>48kHz</td><td>Yes</td><td>$199.00</td></tr></tbody>
 </table>
-
 **Table 2:** Different models of audio interfaces
 
 Based from reviews on the internet, the group chose to use the Rocksmith Real Tone Cable as the audio interface because not only is it compatible with an ASIO driver and is considerably cheap, but also it is a plug and play device. The audio interface is simply a cable with 1/4 inch connector on one end and USB male jack on another as shown below:
