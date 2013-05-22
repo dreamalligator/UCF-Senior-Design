@@ -298,13 +298,21 @@ As you can see, if latency is too high, this may cause frustrations when recordi
 
 <table>
 <th><td>Audio Interfaces</td><td>Bit Depth</td><td>Sample Rate</td><td>ASIO Driver</td><td>Price Range</td></th>
-<tr><td>Alesis Guitarlink</td><td>16</td><td></td><td></td><td></td></tr>
-<tr><td>Rocksmith Real Tone Cable</td><td>16</td><td></td><td></td><td></td></tr>
-<tr><td>Behringer UCG 102 Guitar to USB Interface</td><td>16</td><td></td><td></td><td></td></tr>
-<tr><td>Hosa $\frac{1}{4}$ in. USB Guitar Cable</td><td>16</td><td></td><td></td><td></td></tr>
-<tr><td>Peavey Xport</td><td>16</td><td></td><td></td><td></td></tr>
-<tr><td>M-audio Fast Track USB</td><td>16</td><td></td><td></td><td></td></tr>
+<tr><td>Alesis Guitarlink</td><td>16</td><td>44.1kHz</td><td>No</td><td>$35.00</td></tr>
+<tr><td>Rocksmith Real Tone Cable</td><td>16</td><td>48.0kHz</td><td>Yes</td><td>$30.00</td></tr>
+<tr><td>Behringer UCG 102 Guitar to USB Interface</td><td>16</td><td>44.1kHz or 48.0kHz</td><td>Yes</td><td>$35.00</td></tr>
+<tr><td>Hosa $\frac{1}{4}$ in. USB Guitar Cable</td><td>16</td><td>48kHz</td><td>No</td><td>$25.00</td></tr>
+<tr><td>Peavey Xport</td><td>16</td><td>48kHz</td><td>Yes</td><td>$60.00</td></tr>
+<tr><td>M-audio Fast Track USB</td><td>16</td><td>48kHz</td><td>Yes</td><td>$199.00</td></tr>
 </table>
 
 **Table 2:** Different models of audio interfaces
+
+Based from reviews on the internet, the group chose to use the Rocksmith Real Tone Cable as the audio interface because not only is it compatible with an ASIO driver and is considerably cheap, but also it is a plug and play device. The audio interface is simply a cable with 1/4 inch connector on one end and USB male jack on another as shown below:
+
+![Figure 8](../images/rocksmith.png "Rocksmith Real Tone Cable.")
+
+### A/D Conversion Method
+Recall that MIDI is simply an electronic command. One of the challenges that we faced in this project is to figure out how to convert the analog audio input from the theremin to a MIDI data, which contains the volume and pitch information that correlates with the given audio input. The following sections provide our methods of converting an audio input to a MIDI data.
+
 
