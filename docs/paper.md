@@ -316,4 +316,99 @@ Based from reviews on the internet, the group chose to use the Rocksmith Real To
 ### A/D Conversion Method
 Recall that MIDI is simply an electronic command. One of the challenges that we faced in this project is to figure out how to convert the analog audio input from the theremin to a MIDI data, which contains the volume and pitch information that correlates with the given audio input. The following sections provide our methods of converting an audio input to a MIDI data.
 
+#### Volume Conversion
+Capturing the volume data for MIDI involves integrating with an envelope function. Generally speaking, the envelope follower takes the raw audio waveform (usually in AC) and impulses a varying DC voltage, which represents the amplitude of the audio signal. Next, filtering is used to polish the output in order to filter out the low frequency. Principally, this method is used to capture solely the volume data. The signal will be placed into one of the analog inputs in the processor board.
+
+In the MIDI protocol, the volume channel has hexadecimal value from 0 to 127, where the value 127 represents the maximum volume.
+
+#### Pitch Conversion
+Capturing the pitch data for MIDI involves integrating a threshold comparator. The comparator will generate a square wave and will be fed into the microprocessor. The square wave output of the comparator is used to convert the analog signal into discrete and by doing so, it will sample the incoming signal and compare with the library stored in the microprocessor. Unlike the volume conversion, we take only the pitch analog sound from the pitch preview terminal of the uWave Theremin.
+
+Currently, U.S and many other countries calibrate and tune their acoustic instruments in the frequency of 440Hz (440Hz is the musical note A, above middle C). Although it is not universally accepted, MIDI Manufactures Association has agreed that this will be the MIDI Tuning Standard (MTS) in the protocol[17][17].
+
+To understand how MIDI can translate a given analog pitch to its correspondent MIDI note number, the section that follows will clarify this concept:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Donors and Funding
+We do not have any project sponsors and this project has been fully self-financed. There are still many features and devices we wish to develop further and we wish to continue pursuing the design of musical interfaces and computer music research. Towards this, we will be releasing a Kickstarter in the near future.
+
+# PROJECT SUMMARY
+The initial goal of making a highly adaptable set of musical instruments has been pursued with the uWave theremin, SenseBox, and the Expandome easy-grid OSC controller. These devices were developed with a design mentality to provide a virtuosic experience
+with ease and to complement a musician’s mental organization.
+
+Three initial designs were examined and molded to work in concert: the theremin invented by Léon Theremin, the Pitch to MIDI Tracker by Stephen Hobley, and the Monome and Arduinome developed by the Monome and Flipmu groups respectively. The final results are purposeful iterative designs that expand the capabilities of the originals in novel ways.
+
+In summary, we submit our set of adaptable performance instruments to the community of design for further iterative development and hope that the philosophy of open collaboration engenders further work in new and innovative instruments and interfaces.
+
+# CONCLUSION
+This senior design project has helped the members of the team understand the process of an engineering outcome. With the amount of hours spent doing research and acquainting ourselves with the project scope, we have gained new knowledge about several electrical engineering topics such as high frequency applications, digital signal processing applications, soldering, programing etc.
+
+Each device that was investigated and implemented brought unique findings about the world of Electrical Engineering. In the case of the uWave Theremin, knowledge was increased in regard to understanding how sensitive devices can be when operated with high frequencies. Understanding how much factors play in the stability of the device’s antennas helped gain knowledge of this. Also, being able to work with oscillators that were used to produce musical notes played a part in the team’s knowledge of analog devices.
+
+Another source of knowledge that was gained during this project was learning more about analog-to-digital conversation. In our project, a MIDI device was created to convert analog signals from the uWave Theremin into a digital format known as MIDI. Learning more about MIDI protocols helped us gain more familiarity with music theory and MIDI applications. In addition it helped incorporate new understanding of MIDI with a microcontroller using the Arduino language. It was also learned that with the help of the SenseBox, which is a pitch-to-MIDI converter, the uWave Theremin can be used for many other applications other than music.
+
+With the help of the Expandome, the player has the ablilty to interact with the uWave Theremin and SenseBox in a way that allows for customizability adequate enough for unique performances.
+
+This project has enabled us to take an old but powerful technology which requires quite a few skills and dedication to operate, and made it a little easier and more intuitive for people with minimal musical understanding to enjoy. This was achieved by using the supporting devices, the SenseBox and the Expandomes to produce a feedback system the user can rely on during performance. With that being said, this senior design project sets a good example of what the purpose of engineering is, which takes a problem or a need and produces a solution.
+
+# APPENDIX
+## Acronyms and Nomenclature
+<table>
+<tr><td>AF</td><td>Audio Frequency</td></tr>
+<tr><td>AM</td><td>Amplitude Modulation</td></tr>
+<tr><td>ASIO</td><td>Audio Stream Input/Output</td></tr>
+<tr><td>BJT</td><td>Bi-junction Transistor</td></tr>
+<tr><td>CV</td><td>Control Voltage</td></tr>
+<tr><td>DAW</td><td>Digital Audio Workstation</td></tr>
+<tr><td>DIN</td><td>Deutsches Institut für Normung</td></tr>
+<tr><td>DIP</td><td>Dual In-line Package</td></tr>
+<tr><td>FPO</td><td>Fixed Pitch Oscillator</td></tr>
+<tr><td>IC</td><td>Integrated Circuit</td></tr>
+<tr><td>LCD</td><td>Liquid Crystal Display</td></tr>
+<tr><td>LED</td><td>Light Emitting Diode</td></tr>
+<tr><td>MCD</td><td>Milicandella</td></tr>
+<tr><td>MTS</td><td>MIDI Tuning Standard</td></tr>
+<tr><td>OSC</td><td>Open Sound Control</td></tr>
+<tr><td>PIC</td><td>Peripheral Interface Controller</td></tr>
+<tr><td>RCA</td><td>RF coaxial connector (historically derived from Radio Corporation of America)</td></tr>
+<tr><td>RIF</td><td>Radio Influence Field</td></tr>
+<tr><td>RLC</td><td>Resistor/ Inductor/Capacitor</td></tr>
+<tr><td>SD</td><td>Secure Digital</td></tr>
+<tr><td>SMD</td><td>Surface Mount Device</td></tr>
+<tr><td>TRS</td><td>Tip Ring Slave</td></tr>
+<tr><td>TS</td><td>Tip Slave</td></tr>
+<tr><td>TTL</td><td>Transistor-transistor Logic</td></tr>
+<tr><td>uOSC</td><td>micro-OSC</td></tr>
+<tr><td>USB</td><td>Universal Serial Bus</td></tr>
+<tr><td>VCA</td><td>Voltage Controlled Amplifier</td></tr>
+<tr><td>VPO</td><td>Variable Pitch Oscillator</td></tr>
+<tr><td>VST</td><td>Virtual Studio Technology</td></tr>
+<tr><td>XLR</td><td>X-Linked Receive</td></tr>
+</table>
+
+## Permissions
+Steve Hobley
+contact.png
+
+## License
+This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License[56][56].
+
+All source and schematics are available on GitHub[57][57].
+
+## References
+
 

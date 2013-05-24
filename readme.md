@@ -1,6 +1,6 @@
 ![emi](/images/all_together.png)
 #Senior Design 
-Website for three devices made for EECS Senior Design at UCF, Fall 2012. 
+Website and documents for three devices made for EECS Senior Design at UCF, Fall 2012. 
 
 See http://www.eecs.ucf.edu/seniordesign/su2012fa2012/g01.
 
